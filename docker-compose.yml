@@ -1,0 +1,21 @@
+services:
+  # most barebones image meant to only run the compiled .jar
+  # please build the jar yourself with `./gradlew build`! 
+  # (Alternatively, you can also make the Dockerfile run ./gradlew build, but this will likely be quite slow)
+  thoth:
+    image: gradle:8.7-jdk21-alpine # amazoncorretto:21 #openjdk:21-jdk #zenika/kotlin:latest
+    restart: on-failure
+    tty: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/app
+    working_dir: /app
+    command: ["java", "-jar", "build/libs/Thoth-1.0.jar"] # run the compiled jar. PLEASE BUILD THIS YOURSELF WITH `./gradlew build` (or run it locally with `./gradlew run`)
+
+  test:
+#    image: gradle:8.7-jdk21-alpine # gradle is needed for testing, but this is now included in the base image :)
+    extends:
+        service: thoth
+    command: ["./gradlew", "test", "--no-daemon"]
