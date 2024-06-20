@@ -2,7 +2,7 @@
   <configuration default="false" name="Main with dataset" type="JetRunConfigurationType">
     <option name="MAIN_CLASS_NAME" value="org.example.MainKt" />
     <module name="Thoth.main" />
-    <option name="PROGRAM_PARAMETERS" value="-s &quot;$PROJECT_DIR$/dataset/testsubmissions.csv&quot; -c &quot;$PROJECT_DIR$/dataset/test-gradingconfig.json&quot; -o &quot;$PROJECT_DIR$/dataset/autogradingresults&quot; -e 1 -p" />
+    <option name="PROGRAM_PARAMETERS" value="-s &quot;$PROJECT_DIR$/dataset/testsubmissions.csv&quot; -c &quot;$PROJECT_DIR$/dataset/test-gradingconfig.json&quot; -o &quot;$PROJECT_DIR$/dataset/autogradingresults&quot; -e 5 -p" />
     <shortenClasspath name="NONE" />
     <method v="2">
       <option name="Make" enabled="true" />

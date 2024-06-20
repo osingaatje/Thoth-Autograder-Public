@@ -1,0 +1,44 @@
+Result ID,Candidate ID,Section title,Question number,Question ID,Question version,Question code,Question type,Variable type,Interaction number,Variable name,Variable interpretation,Variable min. value,Variable max. value,Variable type,Variable cardinality,Variable default value,Variable value,Choice sequence
+69420,420,,5,74960,3,java-test3-entrylevel-01,extended_text,response,1,RESPONSE,,,,string,single,,"import java.util.ArrayList;
+
+class HelloWorld {
+    public static int countCommonWords(String sentence1, String sentence2) {
+        String[] words1 = sentence1.split("" "");
+        ArrayList<String> uniqueWords1 = new ArrayList<>();
+        for (String word : words1) {
+            if (!uniqueWords1.contains(word)) {
+                uniqueWords1.add(word);
+            }
+        }
+        
+        String[] words2 = sentence2.split("" "");
+        int count = 0;
+        
+        for (String word : uniqueWords1) {
+            for (String word2 : words2) {
+                if (word2.equals(word)) {
+                    count++;
+                    break;
+                }   
+            }
+        }
+        
+        return count;
+    }
+    
+    public static void main(String[] args) {
+        String[][] testCases = {
+            { ""these sentences are completely identical"", ""these sentences are completely identical""},
+            {""one"", ""one""},
+            {""one example of a non-identical sentence"", ""the example of a non-identical sentence""},
+            {""Case InSenSitIve CHECKING"", ""yeah, insensitive checking""},
+            {""the the the the"", ""this test is the example of multiple same words""}
+        };
+        
+        for (String[] testCaseArr : testCases) {
+            System.out.println(countCommonWords(testCaseArr[0], testCaseArr[1]));
+        }
+       
+    }
+}
+",[]

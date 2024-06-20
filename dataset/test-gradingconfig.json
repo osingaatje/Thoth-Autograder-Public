@@ -1,0 +1,197 @@
+{
+    "iloTypes": [
+      {
+        "id": 1,
+        "description": "Select and use appropriate primitive datatypes, including their preconceived behaviours (methods of such a type)",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 2,
+        "description": "Develop statements for data transformations over primitive datatypes using the appropriate operators, including typecasting of primitive types (Java)",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 3,
+        "description": "Express algorithmic solutions that use sequence and selection structures (conditionals) - (Java)",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 4,
+        "description": "Express algorithmic solutions that use repetition structures (loops)",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 5,
+        "description": "Express unexpected circumstances in the execution flow using language-specific constructs, like Exceptions",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 6,
+        "description": "Select and use appropriate linear data structures",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      },
+      {
+        "id": 7,
+        "description": "Select and use appropriate non-linear data structures",
+        "knowledgeLevel": "APPLYING",
+        "knowledgeKind": "PROCEDURAL"
+      }
+    ],
+    "exercises": [
+      {
+        "id": 5,
+        "questionDescription": "`public static int countCommonWords(String msg1, String msg2)`: returns the number of words present in both Strings, **case insensitively**. Any working algo = 5 points.",
+        "iloWeights": [
+          {
+            "id": 2,
+            "iloTypeId": 2,
+            "totalPoints": 2.0,
+            "dynamicTestSuites": [
+              {
+                "id": 5,
+                "points": 2.0,
+                "description": "Handle basic cases of common words - equivalent length",
+                "inputTypes": [
+                  "STR",
+                  "STR"
+                ],
+                "outputType": "NUM",
+                "funcName": "countCommonWords",
+                "funcIsStatic": true,
+                "testCases": [
+                  {
+                    "id": 50,
+                    "inputs": [
+                      "STR(these sentences are completely identical)",
+                      "STR(these sentences are completely identical)"
+                    ],
+                    "expectedOutput": "NUM(5)",
+                    "exception": null
+                  },
+                  {
+                    "id": 51,
+                    "inputs": [
+                      "STR(one)",
+                      "STR(one)"
+                    ],
+                    "expectedOutput": "NUM(1)",
+                    "exception": null
+                  },
+                  {
+                    "id": 52,
+                    "inputs": [
+                      "STR(one example of a non-identical sentence)",
+                      "STR(another example of a non-identical sentence)"
+                    ],
+                    "expectedOutput": "NUM(5)",
+                    "exception": null
+                  },
+                  {
+                    "id": 53,
+                    "inputs": [
+                      "STR(the last example)",
+                      "STR(this is different)"
+                    ],
+                    "expectedOutput": "NUM(0)",
+                    "exception": null
+                  }
+                ]
+              },
+              {
+                "id": 6,
+                "points": 1.5,
+                "description": "Handles non-equal length of words",
+                "inputTypes": [
+                  "STR",
+                  "STR"
+                ],
+                "outputType": "NUM",
+                "funcName": "countCommonWords",
+                "funcIsStatic": true,
+                "testCases": [
+                  {
+                    "id": 60,
+                    "inputs": [
+                      "STR(HellO this sentence is completely different)",
+                      "STR(HellO from the other one)"
+                    ],
+                    "expectedOutput": "NUM(1)",
+                    "exception": null
+                  },
+                  {
+                    "id": 61,
+                    "inputs": [
+                      "STR(See you later, alligator.)",
+                      "STR(See you in a while, crocodile.)"
+                    ],
+                    "expectedOutput": "NUM(2)",
+                    "exception": null
+                  }
+                ]
+              },
+              {
+                "id": 7,
+                "points": 1.0,
+                "description": "Handles case-insensitive checking of words",
+                "inputTypes": [
+                  "STR",
+                  "STR"
+                ],
+                "outputType": "NUM",
+                "funcName": "countCommonWords",
+                "funcIsStatic": true,
+                "testCases": [
+                  {
+                    "id": 70,
+                    "inputs": [
+                      "STR(SEE yOu later)",
+                      "STR(SeE YoU in a while)"
+                    ],
+                    "expectedOutput": "NUM(2)",
+                    "exception": null
+                  },
+                  {
+                    "id": 71,
+                    "inputs": [
+                      "STR(aaa bbb CCc ddd eEE fff ggg hhh iIi JJj)",
+                      "STR(AAA BBb cCC DdD eEe ffF Ggg hhh iii jjj"
+                    ],
+                    "expectedOutput": "NUM(10)",
+                    "exception": null
+                  }
+                ]
+              }
+            ],
+            "staticTestSuites": [
+              {
+                "id": 1,
+                "points": 0.5,
+                "description": "The solution uses some kind of `for` or `while` loop",
+                "staticCriteria": [
+                  {
+                    "id": 1,
+                    "criterionType": "USES_CONTROL_STRUCTURE",
+                    "config": {
+                      "structures": [
+                        "for",
+                        "while"
+                      ],
+                      "selectionMethod": [
+                        "ANY"
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
