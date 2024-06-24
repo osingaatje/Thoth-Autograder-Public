@@ -20,3 +20,7 @@ Static analysis is done by taking the formatted submissions (unformatted) and pa
 
 # Output
 Thoth outputs its results into a directory as `<input file name>_GRADED_EXERCISES_ex<exercise>_FULLGRADES.json` and a summary of the final grades in `<input file name>_GRADED_EXERCISES_ex<exercise>_SUMMARY.csv`.
+
+
+# More details
+Take a look at `Main.kt` for the general structure of Thoth.
